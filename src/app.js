@@ -8,7 +8,6 @@ const follower = require("./routes/follower");
 const tweet = require("./routes/tweet");
 const feed = require("./routes/feed");
 const explore = require("./routes/explore");
-const bookmarks = require("./routes/bookmarks");
 
 const app = express();
 app.use(cors());
@@ -29,7 +28,6 @@ app.use("/follow", follower);
 app.use("/tweet", tweet);
 app.use("/feed", feed);
 app.use("/explore", explore);
-app.use("/bookmarks", bookmarks);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`server started on port ${PORT}`));
